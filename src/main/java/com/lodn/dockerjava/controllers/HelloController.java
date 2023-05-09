@@ -22,7 +22,7 @@ public class HelloController {
         return new ResponseEntity<>(new Hello("Hello!!", System.getProperty("os.name")), HttpStatus.OK);
     }
 
-    @GetMapping
+    @GetMapping("all")
     public ResponseEntity<List<User>> findAll() {
         return new ResponseEntity<>(usersRepository.findAll(), HttpStatus.OK);
     }
